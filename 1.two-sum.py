@@ -5,17 +5,13 @@
 #
 
 # @lc code=start
-from typing import List
-
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        ans = []
-        for i in range(len(nums)):
-            temp = target - nums[i]
-            for j in range(len(nums)):
-                if nums[j] == temp and i != j:
-                    ans = [i, j]
-                
-        return ans
+        for x in range(len(nums)):
+            for y in range(len(nums)):
+                if x != y:
+                    if nums[x] + nums[y] == target:
+                        return [x, y]
 # @lc code=end
+
 
